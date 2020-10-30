@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title>WestAda Web Design</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+		<script>
+			$(document).ready(function() {
+				$("#info").hide();
+				$(".a1tecFooter").hide();
+				$(".b1tecFooter").hide();
+				$(".a4tecFooter").hide();
+				$(".b3tecFooter").hide();
+				$("#title").click(function() {
+				$("#info").slideToggle(2000);
+				});
+				$("#b1tec").click(function() {
+					$(".b1tecFooter").slideToggle(2000);
+					$(".a1netFooter").hide();
+					$(".a1tecFooter").hide();
+					$(".a1classroomFooter").hide();
+				});
+				$("#a1tec").click(function() {
+					$(".a1tecFooter").slideToggle(2000);
+					$(".b1netFooter").hide();
+					$(".b1tecFooter").hide();
+					$(".b1classroomFooter").hide();
+				});
+				$("#b3tec").click(function() {
+					$(".b3tecFooter").slideToggle(2000);
+					$(".a4netFooter").hide();
+					$(".a4tecFooter").hide();
+					$(".a4classroomFooter").hide();
+				});
+				$("#a4tec").click(function() {
+					$(".a4tecFooter").slideToggle(2000);
+					$(".b3netFooter").hide();
+					$(".b3tecFooter").hide();
+					$(".b3classroomFooter").hide();
+				});
+				$("#closeAll1").click(function() {
+					$(".a1netFooter").hide();
+					$(".a1tecFooter").hide();
+					$(".a1classroomFooter").hide();
+					$(".b1netFooter").hide();
+					$(".b1tecFooter").hide();
+					$(".b1classroomFooter").hide();
+				});
+				$("#closeAll2").click(function() {
+					$(".a4netFooter").hide();
+					$(".a4tecFooter").hide();
+					$(".a4classroomFooter").hide();
+					$(".b3netFooter").hide();
+					$(".b3tecFooter").hide();
+					$(".b3classroomFooter").hide();
+				});
+			});
+		</script>
+		<style>
+			body {
+				font-family: 'Gloria Hallelujah', cursive;
+				background-color: blue;
+			}
+			h1, h2, h3 {
+
+				color: #FFFF00;
+				text-shadow: 3px 3px 3px #FF0000;
+			}
+			h4 {
+				color: #FF0000;
+				text-shadow: 1px 1px #FFFF00;
+			}
+			a {
+				color: white;
+			}
+			img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+			@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+			.container {
+
+				display: grid;
+				grid-template-rows: auto auto auto;
+				grid-template-columns: auto auto auto auto;
+				grid-gap: 10px;
+				background: #36c;
+				background: linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px, #36c;
+				background-size: 15px 30px
+			}
+
+			.header {
+
+				grid-row: 1 /span 1;
+				grid-column: 1 /span 6;
+				background: linear-gradient(to bottom right, #33ccff 0%, #99ff99 100%);
+				text-align: center;
+			}
+			.main10 {
+
+				grid-row: 2 /span 1;
+				grid-column: 1 /span 3;
+				background-color: black;
+				background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px), radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+				background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+				background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+				padding: 8px;
+				text-align: center;
+			}
+			.main11 {
+
+				grid-row: 2 /span 1;
+				grid-column: 4 /span 3;
+				background-color: black;
+				background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px), radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+				background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+				background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+				padding: 8px;
+				text-align: center;
+			}
+			.bar1 {
+
+				grid-row: 3 /span 1;
+				grid-column: 4 /span 3;
+			}
+			.bar2 {
+
+				grid-row: 3 /span 1;
+				grid-column: 1 /span 3;
+			}
+			.a1tecFooter {
+
+				grid-row: 4 /span 1;
+				grid-column: 1 /span 6;
+				background-color: #556;
+				background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+				background-size: 80px 140px;
+				background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+				text-align: center;
+			}
+			.b1tecFooter {
+
+				grid-row: 4 /span 1;
+				grid-column: 1 /span 6;
+				background-color: #556;
+				background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+				background-size: 80px 140px;
+				background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+				text-align: center;
+			}
+			.a4tecFooter {
+
+				grid-row: 4 /span 1;
+				grid-column: 1 /span 6;
+				background-color: #556;
+				background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+				background-size: 80px 140px;
+				background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+				text-align: center;
+			}
+			.b3tecFooter {
+
+				grid-row: 4 /span 1;
+				grid-column: 1 /span 6;
+				background-color: #556;
+				background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+				background-size: 80px 140px;
+				background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+				text-align: center;
+			}
+			.westadaImage {
+			  grid-area: west;
+			}
+			.eagleImage {
+			  grid-area: eagle;
+			}
+			.meridianImage {
+			  grid-area: meridian;
+			}
+			.meridian2Image {
+			  grid-area: meridian2;
+			}
+			.mountainviewImage {
+			  grid-area: mountainview;
+			}
+			.rockyImage {
+			  grid-area: rocky;
+			}
+			.centinnealImage {
+			  grid-area: centinneal;
+			}
+			.imagesContainer {
+
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				grid-template-rows: 150px 150px;
+				grid-gap: 10px;
+				grid-template-areas:
+				'west   eagle    meridian    meridian2'
+				'west   mountainview    rocky  centinneal'
+
+			}
+		</style>
+		<style>
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333;
+			}
+
+			li {
+				float: left;
+			}
+
+			li a, .dropbtn {
+				display: inline-block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+
+			li a:hover, .dropdown:hover .dropbtn {
+				background-color: red;
+			}
+
+			li.dropdown {
+				display: inline-block;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				text-align: left;
+			}
+
+			.dropdown-content a:hover {
+				background-color: #f1f1f1
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="imagesContainer">
+
+			<div class="westadaImage">
+				<a href ="https://www.westada.org/Domain/4" target="_blank">
+				<img src="images/westada.png" alt="WestAda" height="300" />
+			</a>
+			</div>
+
+			<div class="eagleImage">
+				<a href ="https://www.westada.org/Domain/54" target="_blank">
+				<img src="images/eagle.png" alt="Eagle" height="150" />
+			</a>
+			</div>
+
+			<div class="meridianImage">
+				<a href ="https://www.westada.org/Domain/55" target="_blank">
+				<img src="images/meridian.jpg" alt="Meridian" height="150" />
+			</a>
+			</div>
+
+			<div class="meridian2Image">
+				<a href ="https://www.westada.org/Domain/56" target="_blank">
+				<img src="images/meridian2.jpg" alt="Meridian" height="150" />
+			</a>
+			</div>
+
+			<div class="mountainviewImage">
+				<a href ="https://www.westada.org/Domain/57" target="_blank">
+				<img src="images/mountainview.jpg" alt="mountainview" height="150" />
+			</a>
+			</div>
+
+			<div class="rockyImage">
+				<a href ="https://www.westada.org/rmhs" target="_blank">
+				<img src="images/rocky.jpg" alt="rocky" height="150" />
+			</a>
+			</div>
+
+			<div class="centinnealImage">
+				<a href ="https://www.westada.org/Domain/51" target="_blank">
+				<img src="images/centinneal.png" alt="centinneal" height="150" />
+			</a>
+			</div>
+
+
+		</div>
+		<div class="container">
+			<div class="header">
+				<h1 id="title">Database Design and Web Development</h1>
+				<h4 id="info">Tanner H A1 -- 12 January 2018<br>
+					<a href="http://westada.tech/a1/tannerh/">Click to see my other website!</a>
+				</h4>
+			</div>
+			<div class="main11">
+				<h1>11<sup>th</sup> Grade</h1>
+				<h2>Database Design &amp; Programming</h2>
+				<h3>-MySQL
+				<br>
+				-ERD
+				<br>
+				-123NF
+				<br>
+				-SQL
+				<br>
+				-PHP
+				<br>
+				-JS
+				<br>
+				-CSS3, HTML5</h3>
+			</div
+			<br>
+			<div class="main10">
+				<h1>10<sup>th</sup> Grade</h1>
+				<h2>Web Design &amp; Development</h2>
+
+				<h3> -HTML5
+				<br>
+				-CSS3
+				<br>
+				-JavaScript </h3>
+
+			</div>
+			<div class="bar1">
+				<ul>
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">Period A1</a>
+						<div class="dropdown-content">
+							<a id="a1tec" href="#tec">Westada.tec Links</a>
+						</div>
+					</li>
+
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">Period B1</a>
+						<div class="dropdown-content">
+							<a id="b1tec"  href="#tec">Westada.tec Links</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn" id="closeAll1">Click to close all</a>
+
+					</li>
+				</ul>
+			</div>
+			<div class="bar2">
+				<ul>
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">Period A4</a>
+						<div class="dropdown-content">
+							<a id="a4tec" href="#tec">Westada.tec Links</a>
+						</div>
+					</li>
+
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">Period B3</a>
+						<div class="dropdown-content">
+							<a id="b3tec"  href="#tec">Westada.tec Links</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn" id="closeAll2">Click to close all</a>
+
+					</li>
+
+				</ul>
+			</div>
+			<div class="a4tecFooter">
+				<h4>Period A4
+				<br>
+				westada.tech Links</h4>
+
+				<br>
+				<a href="http://www.westada.tech/a4/farhana" >Farhan A.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/joshm" >Josh M.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/wyattt" >Wyatt T.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/brandonw" >Brandon W.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/alexp" >Alex P.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/miked" >Mike D.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/joshs" >Josh S.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/calebp" >Caleb P.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/zachf" >Zach F.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/ianw" >Ian W.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/samw" >Sam W.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/austins" >Austin S.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/cardonb" >Cardon B.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/adamk" >Adam K.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/raes" >Rae S.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/brandend" >Braden D.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/trungn" >Trung N.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/myless" >Myles S.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/hestivenh" >Hestiven H.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/austinf" >Austin F.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/christopherz" >Christopher Z.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/williamh" >William H.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/christianr" >Christian R.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/daniels" >Daniel S.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/jacks" >Jack S.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/calvina" >Calvin A.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/dakinr" >Dakin R.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/lincolnw" >Lincoln W.</a>
+				<br>
+				<a href="http://www.westada.tech/a4/nated" >Nate D.</a>
+			</div>
+			</div>
+			<div class="a1tecFooter">
+				<h4>Period A1
+				<br>
+				westada.tech Links</h4>
+
+				<br>
+				<a href="http://www.westada.tech/a1/gavinb" >Gavin B</a>
+				<br>
+				<a href="http://www.westada.tech/a1/jpm" >Joseph Mu</a>
+				<br>
+				<a href="http://www.westada.tech/a1/zacharys" >Zachary S</a>
+				<br>
+
+				<a href="http://www.westada.tech/a1/bryanh" >Bryan H</a>
+				<br>
+				<a href="http://www.westada.tech/a1/josephm" >Joseph Mo</a>
+				<br>
+				<a href="http://www.westada.tech/a1/kenisons" >Kenison S</a>
+				<br>
+
+				<a href="http://www.westada.tech/a1/chases" >Chase S</a>
+				<br>
+				<a href="http://www.westada.tech/a1/davidb" >David B</a>
+				<br>
+				<a href="http://www.westada.tech/a1/connorc" >Connor C</a>
+				<br>
+
+				<a href="http://www.westada.tech/a1/peterc" >Peter C</a>
+				<br>
+				<a href="http://www.westada.tech/a1/andrewh" >Andrew H</a>
+				<br>
+
+				<a href="http://www.westada.tech/a1/jamesr" >James R</a>
+				<br>
+				<a href="http://www.westada.tech/a1/alysec" >Alyse C</a>
+				<br>
+				<a href="http://www.westada.tech/a1/hunterf" >Hunter F</a>
+				<br>
+				<a href="http://www.westada.tech/a1/michaelc" >Michael C</a>
+				<br>
+
+				<a href="http://www.westada.tech/a1/heathers" >Heather S</a>
+				<br>
+				<a href="http://www.westada.tech/a1/briellel" >Brielle L</a>
+				<br>
+				<a href="http://www.westada.tech/a1/tannerh" >Tanner H</a>
+				<br>
+				<a href="http://www.westada.tech/a1/richardm" >Richard M</a>
+
+			</div>
+			<div class="b1tecFooter">
+				<h4>Period B1
+				<br>
+				westada.tech Links</h4>
+				<br>
+				<a href="http://www.westada.tech/b1/elit" >Eli T</a>
+				<br>
+				<a href="http://www.westada.tech/b1/dallind" >Dallin D</a>
+				<br>
+				<a href="http://www.westada.tech/b1/hannahw" >Hannah W</a>
+				<br>
+
+				<a href="http://www.westada.tech/b1/loganw" >Logan W</a>
+				<br>
+				<a href="http://www.westada.tech/b1/abdulazizk" >Abdulaziz K</a>
+				<br>
+				<a href="http://www.westada.tech/b1/chasek" >Chase K</a>
+				<br>
+				<a href="http://www.westada.tech/b1/kylet" >Kyle T</a>
+				<br>
+
+				<a href="http://www.westada.tech/b1/donovanw" >Donovan W</a>
+				<br>
+				<a href="http://www.westada.tech/b1/lukec" >Luke C</a>
+				<br>
+				<a href="http://www.westada.tech/b1/tylerc" >Tyler C</a>
+				<br>
+				<a href="http://www.westada.tech/b1/peterh" >Peter H</a>
+				<br>
+
+				<a href="http://www.westada.tech/b1/justinf" >Justin F</a>
+				<br>
+				<a href="http://www.westada.tech/b1/ethana" >Ethan A</a>
+				<br>
+				<a href="http://www.westada.tech/b1/johnh" >John H</a>
+				<br>
+				<a href="http://www.westada.tech/b1/jjn" >Jonathon N</a>
+				<br>
+
+				<a href="http://www.westada.tech/b1/connerf" >Conner F</a>
+				<br>
+				<a href="http://www.westada.tech/b1/carterh" >Carter H</a>
+				<br>
+				<a href="http://www.westada.tech/b1/brendans" >Brendan S</a>
+				<br>
+				<a href="http://www.westada.tech/b1/alejandroe" >Alejandro E</a>
+				<br>
+
+				<a href="http://www.westada.tech/b1/roscoea" >Roscoe A</a>
+				<br>
+				<a href="http://www.westada.tech/b1/danic" >Dani C</a>
+				<br>
+				<a href="http://www.westada.tech/b1/isaacw" >Isaac W</a>
+			</div>
+			<div class="b3tecFooter">
+				<h4>Period B3
+				<br>
+				westada.tech Links</h4>
+
+				<a href="http://www.westada.tech/b3/colterj" >Colter J</a>
+				<br>
+				<a href="http://www.westada.tech/b3/romand" >Roman D</a>
+				<br>
+				<a href="http://www.westada.tech/b3/tylerb" >Tyler B</a>
+				<br>
+				<a href="http://www.westada.tech/b3/megans" >Megan S</a>
+				<br>
+
+				<a href="http://www.westada.tech/b3/timothyr" >Timothy R</a>
+				<br>
+				<a href="http://www.westada.tech/b3/connorh" >Connor H</a>
+				<br>
+				<a href="http://www.westada.tech/b3/parkerm" >Parker M</a>
+				<br>
+				<a href="http://www.westada.tech/b3/kikin" >Kiki N</a>
+				<br>
+
+				<a href="http://www.westada.tech/b3/madir" >Madi R</a>
+				<br>
+				<a href="http://www.westada.tech/b3/iant" >Ian T</a>
+				<br>
+				<a href="http://www.westada.tech/b3/claytonw" >Clayton W</a>
+				<br>
+
+				<a href="http://www.westada.tech/b3/brandonp" >Brandon P</a>
+				<br>
+				<a href="http://www.westada.tech/b3/markot" >Marko T</a>
+				<br>
+				<a href="http://www.westada.tech/b3/ethano" >Ethan O</a>
+				<br>
+
+				<a href="http://www.westada.tech/b3/gabew" >Gabe W</a>
+				<br>
+				<a href="http://www.westada.tech/b3/drewd" >Drew D</a>
+				<br>
+				<a href="http://www.westada.tech/b3/benm" >Ben M</a>
+				<br>
+				<a href="http://www.westada.tech/b3/connors" >Connor S</a>
+				<br>
+
+				<a href="http://www.westada.tech/b3/parkeru" >Parker U</a>
+				<br>
+				<a href="http://www.westada.tech/b3/brittens" >Britten S</a>
+				<br>
+				<a href="http://www.westada.tech/b3/perryk" >Perry K</a>
+				<br>
+				<a href="http://www.westada.tech/b3/jordanp" >Jordan P</a>
+				<br>
+
+				<a href="http://www.westada.tech/b3/brockd" >Brock D</a>
+				<br>
+				<a href="http://www.westada.tech/b3/haydenc" >Hayden C</a>
+			</div>
+
+
+
+		</div>
+	</body>
+
+</html>

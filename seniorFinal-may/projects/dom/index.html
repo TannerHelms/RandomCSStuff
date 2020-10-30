@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>Dom-elementor</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+  <style>
+  #name {
+    color: red;
+  }
+
+  body {
+    background-color: #CDA0E3;
+  }
+  </style>
+</head>
+
+<body>
+      <div id="page"></div>
+        <hr class=".my-4">
+        <div id="wrap">
+
+<div class="card bg-dark m-auto w-75">
+  <h3 class="card-header text-light">
+
+    <span class="h1 text-warning font-italic mr-2">JavaScript</span> <h7 id="name">Tanner H</h7>
+    <span class="btn btn-sm btn-danger float-right" onclick="hide_Ele()">X</span>
+
+  </h3>
+<div class="card-body row">
+    <div class="input-group">
+      <input type="text" class="col-2" placeholder="tagname">
+      <input type="text" class="col-10" placeholder="className">
+      <input type="text" class="col-2" placeholder="id">
+      <input type="text" class="col-8" placeholder="innerHTML">
+      <input type="text" class="col-2" placeholder="parent id">
+
+    </div>
+<div class ="btn-group mt-2">
+    <span class="btn btn-warning" onclick="create_Ele()">Create New Element</span>
+    <span class="btn btn-danger" onclick="remove_Ele()">Remove Last Element</span>
+    <span class="btn btn-outline-primary" onclick="reset()">Reset</span>
+</div>
+</div>
+</div>
+</div>
+<div id="instructions">
+  <h1>Create Element</h1>
+  <hr>
+  <h5>Step 1: This creates html elements in the place above the hr.</h5>
+  <br/>
+  <h5>Step 2: You first have to put the html tag in the tag place.</h5>
+  <br/>
+  <h5>Step 3: Then you can choose what the id and class are in their respective spots.</h5>
+  <br/>
+  <h5>Step 4: Then in the innerHTML spot you can choose what will go inside of your tag. An example is if you had a h1 tag then it's going to be the words that are displayed.</h5>
+  <br/>
+  <h5>Step 5: Then you click Create Element.</h5>
+  <br/>
+  <h1>Remove Last Element</h1>
+  <hr>
+  <h5>Step 1: Follow the Create Element Steps above.</h5>
+  <br/>
+  <h5>Step 2: Then click the remove last element button to remove the last element that was created.</h5>
+  <br/>
+  <h1>Reset</h1>
+  <hr>
+  <h5>When the reset button is clicked it completely resets all of the inputs to their original states.</h5>
+  <br/>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="http://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+<script src=app.js></script>
+</body>

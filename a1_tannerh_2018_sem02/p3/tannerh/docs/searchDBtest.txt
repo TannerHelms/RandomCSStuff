@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded" rel="stylesheet">
+  <style>
+  body {
+    background-image: url(../images/wood1.jpg);
+  }
+h4 {
+  font-family: 'BioRhyme Expanded', serif;
+}
+  #master {
+    display: grid;
+    grid-template-columns: 1800px auto;
+    grid-template-rows: 120px auto 200px;
+    grid-gap: 10px;
+    color: red;
+    grid-template-areas:
+    'header       header'
+    'search       instructions'
+    'footer       footer'
+    ;
+  }
+  #header {
+    grid-area: header;
+    text-align: center;
+    background-image: url(../images/blue.jpg);
+  }
+  #search {
+    grid-area: search;
+    background-image: url(../images/blue.jpg);
+  }
+  #instructions {
+    grid-area: instructions;
+    background-image: url(../images/blue.jpg);
+  }
+  #footer {
+    grid-area: footer;
+    background-image: url(../images/blue.jpg);
+  }
+  table {
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid black;
+
+  }
+  th {
+    font-size: 15px;
+    text-align: center
+  }
+  td {
+    font-size: 15px;
+    text-align: center;
+
+  }
+  thead{
+    border-bottom: 2px solid black;
+  }
+  tbody {
+    color: blue;
+    max-height: 300px;
+  }
+tbody:nth-child(even) {background: #FFF}
+tbody:nth-child(odd) {background: #CCC}
+
+
+  </style>
+</head>
+
+<body>
+  <div id="master">
+
+    <div id="header">
+      <br>
+      <h4>Hello, welcome to Search DB!</h4>
+      <br />
+    </div>
+
+    <div id="search">
+      <h4>search</h4>
+      <div style="overflow-x:auto;">
+      					<table>
+                  <col width="35">
+                  <col width="100">
+                  <col width="100">
+                  <col width="150">
+                  <col width="130">
+                  <col width="100">
+                  <col width="200">
+                  <col width="250">
+                  <col width="100">
+                  <col width="230">
+                  <col width="150">
+                  <col width="100">
+                  <col width="100">
+                  <thead>
+      							<tr>
+      				  	   <th>ID</th>
+      						   <th>First Name</th>
+      						   <th>Last Name</th>
+      						   <th>When It Happened</th>
+      						   <th>How Long</th>
+      						   <th>How Many</th>
+      						   <th>Alien_description</th>
+      						   <th>What they did</th>
+      						   <th>Other Abductees</th>
+      						   <th>Abductee Description</th>
+      						   <th>Other Info</th>
+      						   <th>Email</th>
+      						   <th>Report Date</th>
+      							</tr>
+                  </thead>
+
+      								<?php
+      							  include '../php/DBconnect_4parm.php';
+      							  $sql="SELECT id, first_name, last_name, when_it_happened, how_long, how_many, alien_description, what_they_did, other_abductees, abductee_description, other_info, email, report_date  FROM alien_abduction";
+      							  $result=$conn->query($sql);
+      							  if($result->num_rows>0) {
+      							  // output data of each row
+      							  while($row=$result->fetch_assoc()) {
+      							  echo "<tbody><tr><td>".$row["id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["when_it_happened"]."</td><td>".$row["how_long"]."</td><td>".$row["how_many"]."</td><td>".$row["alien_description"]."</td><td>".$row["what_they_did"]."</td><td>".$row["other_abductees"]."</td><td>".$row["abductee_description"]."</td><td>".$row["other_info"]."</td><td>".$row["email"]."</td><td>".$row["report_date"]."</td></tr></tbody>";
+      							  }
+      							  echo "</table>";
+      							  } else {
+      							  echo "0 results";
+      							  }
+      							  $conn->close();
+      							  ?>
+
+      						</table>
+                </div>
+      			</div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div id="instructions">
+      <h5>instructions</h5>
+    </div>
+
+    <div id="footer">
+      <h2>footer</h2>
+    </div>
+  </div>
+  <br />
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Record</title>
+  <style>
+  table{
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+  tr,td{
+    border: 1px solid black;
+    text-align:center;
+  }
+  tr:nth-child(even) {
+    background-color: gray;
+  }
+  th{
+    padding: 2px 4px;
+  }
+  </style>
+</head>
+<body>
+  <div style="background-color:#737373;border:3px solid black;padding:10px">
+    <?php
+      require '../php/DBconnect_4parm.php';
+      $getID = $_POST['ID_input'];
+
+      $sql = "SELECT * FROM alien_abduction where id = $getID";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+        // output data of each row
+        echo "<table id='DBTable'>";
+        echo "<th>ID</th><th>Name</th><th>Email</th><th>Happened on</th><th>Gone for</th><th># of aliens</th><th>Alien description</th><th>What they did</th><th>Other abductees</th><th>Abductee description</th><th>Other information</th><th>Report date</th>";
+        while($row = $result->fetch_assoc()) {
+
+            echo "<tr><td>".$row["id"]. "</td>
+                  <td>".$row["first_name"]. " ". $row["last_name"]. "</td>
+                  <td>".$row["email"] ."</td>
+                  <td>".$row["when_it_happened"]."</td>
+                  <td>".$row["how_long"]."</td>
+                  <td>".$row["how_many"]."</td>
+                  <td>".$row["alien_description"]."</td>
+                  <td>".$row["what_they_did"]."</td>
+                  <td>".$row["other_abductees"]."</td>
+                  <td>".$row["abductee_description"]."</td>
+                  <td>".$row["other_info"]."</td>
+                  <td>".$row["report_date"]."</td></tr>";
+
+        }
+        echo "</table>";
+      } else {
+        echo "0 results";
+      }
+
+      require '../php/DBclose.php';
+     ?>
+    <h3>Update Record:</h3>
+    <?php
+    include '../php/DBconnect_4parm.php';
+    $id = $_POST["ID_input"];
+    $sql = "SELECT * FROM alien_abduction WHERE id=$id";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+
+
+    echo '
+        <form method="post" action="update.php">
+        <label for"id">ID:</label><br>
+        <input type="text" id="id" name="id" value="'.$id.'" readonly><hr>
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstname" value="'.$row["first_name"].'"  /><hr />
+
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname" value="'.$row["last_name"].'"/><hr />
+
+        <label for="email">What is your email?</label><br>
+        <input type="text" id="email" name="email" value="'.$row["email"].'"/><hr />
+        <label for="whenithappened">When did it happen?</label><br>
+        <input type="text" id="whenithappened" name="whenithappened" value="'.$row["when_it_happened"].'"/><hr />
+        <label for="howlong">How long were you gone?</label><br>
+        <input type="text" id="howlong" name="howlong"value="'.$row["first_name"].'" /><hr />
+
+
+        <label float="clear"for="howmany">How many did you see?</label><br>
+        <input type="text" id="howmany" name="howmany"value="'.$row["how_many"].'" /><hr />
+        <label for="aliendescription">Describe them</label><br>
+        <input type="text" id="aliendescription" name="aliendescription" size="32" value="'.$row["how_long"].'"/><hr />
+        <label for="whattheydid">What did they do to you?</label><br>
+        <input type="text" id="whattheydid" name="whattheydid" size="32" value="'.$row["what_they_did"].'" /><hr />
+
+        <label for="otherabductees">Did you see any other abductees?</label><br>
+        Yes <input type="radio" id="otherabductees" name="otherabductees" value="yes" />
+        No <input type="radio" id="otherabductees" name="otherabductees" value="no" /><hr />
+        <label for="abductdescription">Describe them</label><br>
+        <input type="text" id="abductdescription" name="abductdescription" value="'.$row["abductee_description"].'"><hr>
+        <label for="frankspotted">Did you see Frank (a Remoolian inside a pugs body)</label>
+        <br>
+        Yes <input type="radio" id="frankspotted" name="frankspotted" value="yes" />
+        No <input type="radio" id="frankspotted" name="frankspotted" value="no" /><hr />
+
+        <label for="other">Anything else you want to add?</label><br>
+      <textarea id="other" name="other" value="'.$row["other_info"].'"></textarea><hr />
+      <input type="submit" value="Update Abduction Information  " name="submit" float="left" /><br>
+      </form>';
+    }
+    require 'DBclose.php';
+    ?>
+   <a href="../pages/searchDB.php"><p>Back</p></a>
+ </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  background-image: url(../images/wood1.jpg);
+}
+#header {
+  grid-area: hd;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  text-align: center;
+  font-family: 'BioRhyme Expanded', serif;
+  background-image: url(../images/blue.jpg);
+  color: red;
+
+}
+#navBar{
+  grid-area:navBar;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+  background-image: url(../images/blue.jpg);
+  color: red;
+}
+#search {
+  grid-area: search;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+  background-image: url(../images/blue.jpg);
+  color: red;
+}
+
+#instructions {
+  grid-area: instruct;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+  background-image: url(../images/blue.jpg);
+  color: red;
+}
+
+#footer {
+  grid-area: ft;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+  background-image: url(../images/blue.jpg);
+  color: red;
+}
+
+#master {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 10px;
+  grid-template-areas:
+  'hd          hd '
+  'search      instruct'
+  'navBar      navBar'
+  'ft          ft ';
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    color: red;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+table{
+  border: 3px solid black;
+  border-collapse: collapse;
+  color: red;
+}
+tr,td{
+  border: 1px solid black;
+  text-align:center;
+  color: red;
+}
+tr:nth-child(even) {
+  background-color: #565656;
+}
+th{
+  padding: 2px 4px;
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  background-image: url(images/wood1.jpg);
+}
+div {
+  font-family: 'BioRhyme Expanded', serif;
+  background-image: url(images/blue.jpg);
+  padding: 20px;
+  color: white;
+}
+h4 {
+  color: white;
+}
+table{
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+tr,td{
+  border: 1px solid black;
+  text-align:center;
+}
+tr:nth-child(even) {
+  background-color: gray;
+}
+th{
+  padding: 2px 4px;
+}

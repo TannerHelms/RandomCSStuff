@@ -1,0 +1,88 @@
+body{
+  background-image: url(../images/wood1.jpg);
+}
+div {
+  font-family: 'BioRhyme Expanded', serif;
+  background-image: url(../images/blue.jpg);
+  padding: 20px;
+  color: red;
+}
+h4 {
+  color: red;
+}
+
+#header {
+  grid-area: hd;
+  text-align: center;
+}
+#navBar{
+  grid-area:navBar;
+}
+#search {
+  grid-area: search;
+  background-color: #FFFF00;
+}
+
+#instructions {
+  grid-area: instruct;
+  background-color: #FFFF00;
+}
+
+#footer {
+  grid-area: ft;
+  background-color: #FFFF00;
+}
+
+#master {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 10px;
+  grid-template-areas:
+  'hd          hd '
+  'search      instruct'
+  'navBar      navBar'
+  'ft          ft ';
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    color: red;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+table{
+  border: 3px solid black;
+  border-collapse: collapse;
+  color: red;
+}
+tr,td{
+  border: 1px solid black;
+  text-align:center;
+  color: red;
+}
+tr:nth-child(even) {
+  background-color: #565656;
+}
+th{
+  padding: 2px 4px;
+  color: red;
+}

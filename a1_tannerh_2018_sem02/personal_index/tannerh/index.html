@@ -1,0 +1,289 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".row2").hide();
+      $(".rowCode").hide();
+      $("#footer").hide();
+      $("#navBarTech").click(function() {
+        $("#footer").show();
+        $(".row2").slideToggle(2000);
+        $(".rowCode").hide();
+      });
+      $("#navBarCode").click(function() {
+        $("#footer").show();
+        $(".rowCode").slideToggle(2000);
+        $(".row2").hide();
+      });
+    });
+  </script>
+  <style>
+    body {
+      background-color: blue;
+      font-family: 'Amatic SC', cursive;
+      text-align: center;
+      background-image: url(006_Navigation/wood1.jpg);
+    }
+
+    h4 {
+      color: #4dff4d;
+      text-shadow: 3px 3px 3px blue;
+      font-size: 35px;
+    }
+
+    h5 {
+      color: #4dff4d;
+      text-shadow: 3px 3px 3px blue;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    a {
+      color: red;
+    }
+
+    #main:hover {
+      background-color: powderblue;
+      transition: background-color .5s;
+    }
+
+    #imageEagle:hover,
+    #imageWestada:hover,
+    #imageCentinneal:hover {
+      width: 50%;
+    }
+
+
+    .navText {
+      color: #4dff4d;
+      text-shadow: 3px 3px 3px blue;
+      font-size: 25px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: auto;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+
+    #alienForm,
+    #fullStack,
+    #masterIndex,
+    #footerCode {
+      border-radius: 25px;
+      background-color: blue;
+      box-shadow: 10px 15px 23px green;
+      width: auto;
+    }
+
+    #master {
+      display: grid;
+      grid-template-columns: 350px auto 350px;
+      grid-template-rows: auto auto auto auto;
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+      text-align: center;
+    }
+
+    #descriptionMaster {
+      grid-column: 3 / span 1;
+      grid-row: 4 / span 1;
+    }
+
+    #descriptionForms {
+      grid-column: 1 / span 1;
+      grid-row: 4 / span 1;
+    }
+
+    #footerp3Code {
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+    }
+
+
+    #header {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+
+
+      box-shadow: 5px 10px 18px green;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 100%;
+      padding: 15px;
+    }
+
+    #imageEagle {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    #imageCentinneal {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    #imageWestada {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    #middleFooter {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    #main {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      background-color: #ff6666;
+      box-shadow: 5px 10px 18px green;
+
+    }
+
+    #navBar {
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 1;
+      box-shadow: 5px 10px 18px green;
+      width: auto;
+      margin: auto;
+    }
+
+    #footer {
+      width: auto;
+      grid-column: 2 / span 1;
+      grid-row: 4 / span 1;
+      background-color: red;
+      box-shadow: 5px 10px 18px green;
+      width: auto;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 250px 250px 250px;
+      grid-template-rows: auto;
+      padding: 15px;
+      grid-gap: 30px;
+      grid-template-areas:
+      'alien full master'
+
+    }
+
+    #alienForm {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+
+    }
+
+    #fullStack {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+
+    }
+
+    #masterIndex {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+
+    }
+
+    #footer10 {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+
+    }
+
+    #footerCode {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="master">
+    <div id="header">
+      <div id="imageEagle">
+        <a href="http://westada.org/ehs"><img src="006_Navigation/logo/logo_eagle-05.png" width="250px" /></a>
+
+      </div>
+      <div id="middleFooter">
+        <h4>Database Design and Web Development </h4>
+        <h5>By: Tanner H - 26 January 2018 - Class A1</h5>
+      </div>
+      <div id="imageWestada">
+        <a href="http://westada.org"><img src="006_Navigation/logo/West Ada-23.png" width="230px" /></a>
+      </div>
+    </div>
+    <div id="main">
+      <h4>11th Grade</h4>
+      <h4>Database Design and Programming</h4>
+      <h4>Click on the links below to view my projects!</h4>
+    </div>
+    <div id="imageCentinneal">
+      <a href="http://westada.org/chs"><img src="006_Navigation/logo/logo_centennial-04.png" width="230px" /></a>
+    </div>
+    <div id="navBar">
+      <ul>
+        <li>
+          <a id="navBarTech" href="#tech"><h1 class="navText">Tech Links</h1></a>
+        </li>
+        <li>
+          <a id="navBarCode" href="#download"><h1 class="navText">Click here to download my code!</h1></a>
+        </li>
+      </ul>
+    </div>
+    <div id="descriptionMaster">
+      <h4><u>Master Index</u><br>The Master Index will take you to another webpage where you can use a dropdown menu to look at other peoples pages.</h4>
+    </div>
+    <div id="descriptionForms">
+      <h4><u>Full Stack</u><br>This webpage will show you how we used full stack to connect PHP, MySql, CSS, JQuery and html</h4>
+    </div>
+    <div id="footerp3Code">
+      <h4><u>Project 3</u><br>This project is a Alian Abduction form. Here you can submit information about an abduction. </h4>
+    </div>
+    <div id="footer">
+
+      <div id="fullStack" class="row2">
+        <h4><a href="http://westada.tech/a1/p1/tannerh">P1</a></h4>
+      </div>
+      <div id="masterIndex" class="row2">
+        <h4><a href="http://westada.tech/a1/p2/tannerh">P2</a></h4>
+      </div>
+      <div id="alienForm" class="row2">
+        <h4><a href="http://westada.tech/a1/p3/tannerh">P3</a></h4>
+      </div>
+
+      <div id="footer10" class="rowCode">
+        <h4>Download -</h4>
+      </div>
+
+      <div id="footerCode" class="rowCode">
+        <h4><a href="tannerh.zip">Download Code</a></h4>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

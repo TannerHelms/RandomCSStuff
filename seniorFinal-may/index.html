@@ -1,0 +1,247 @@
+
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="/projects/java/js/domtime.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".row2").hide();
+        $("#footer").hide();
+        $("#project").click(function() {
+          $("#footer").show();
+          $(".row2").slideToggle(2000);
+        });
+      });
+    </script>
+    <style>
+      body {
+        background-color: blue;
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        background-image: url(images/wood1.jpg);
+      }
+  
+      h4 {
+        color: black;
+        text-shadow: 3px 3px 3px blue;
+        font-size: 35px;
+      }
+  
+      h5 {
+        color: #4dff4d;
+        text-shadow: 3px 3px 3px blue;
+        font-size: 25px;
+        text-align: center;
+      }
+  
+      a {
+        color: red;
+      }
+  
+      #main:hover {
+        background-color: powderblue;
+        transition: background-color .5s;
+      }
+  
+      #imageEagle:hover,
+      #imageWestada:hover,
+      #imageCentinneal:hover {
+        width: 50%;
+      }
+  
+  
+      .navText {
+        color: #4dff4d;
+        text-shadow: 3px 3px 3px blue;
+        font-size: 25px;
+      }
+  
+  
+  
+  @media screen and (max-widht: 40em) {
+      #master {
+        display: grid;
+        grid-template-columns: 350px auto 350px;
+        grid-template-rows: auto auto auto auto;
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
+        text-align: center;
+      }
+    }
+      #header {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+  
+  
+        box-shadow: 5px 10px 18px green;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100%;
+        padding: 15px;
+      }
+  
+      #imageEagle {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+      }
+  
+      #imageCentinneal {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+      }
+  
+      #imageWestada {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+      }
+  
+      #middleFooter {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+      }
+  
+      #main {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        background-color: #ff6666;
+        box-shadow: 5px 10px 18px green;
+  
+      }
+  
+      #navBar {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        box-shadow: 5px 10px 18px green;
+        width: auto;
+        margin: auto;
+      }
+  
+      #footer {
+        width: auto;
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 1;
+        background-color: red;
+        box-shadow: 5px 10px 18px green;
+        width: auto;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: auto;
+        padding: 15px;
+        grid-gap: 30px;
+        grid-template-areas:
+        'alien full master'
+  
+      }
+  
+      #alienForm {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+  
+      }
+  
+      #Links {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        background-color: blue;
+        border-radius: 25px;
+      }
+  
+      #masterIndex {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+  
+      }
+  #pizza {
+  background-image: url(images/fabric.jpg);
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 25px;
+  }
+  
+  .item1 { grid-area: header; }
+  .item2 { grid-area: menu; }
+  .item3 { grid-area: main; }
+  .item4 { grid-area: right; }
+  .item5 { grid-area: footer; }
+
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main none right right'
+      'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  #project {
+    color: black;
+  }
+  .work {
+				background-color: rgb(255, 255, 255);
+				width: 50%;
+				color: black;
+				margin: auto;
+				border-radius: 5px;
+				padding: 5px;
+				text-align: left;
+			}
+  
+  
+    </style>
+  
+  </head>
+  
+  <body>
+  <br>
+  <br>
+    <div id="pizza" class="grid-container">
+  
+    <div class="item1"><h4> Advanced Computer Science<br>Advanced Web Design </h4>
+    <h5>By: Tanner H - 29 August 2008 - Class 2B</h5>
+    </div>
+    
+    <div class="item2">  <a href="http://westada.org/chs"><img src="images/logo_centennial.png" width="230px" /></a></div>
+    <div class="item3">  <h4>12th Grade</h4>
+      <h4>Advanced Computer Science<br>Advanced Web Design</h4>
+      <h4>Click on the links below to view my projects!</h4></div>
+    <div class="item4">  <a href="http://westada.org/ehs"><img src="images/logo_eagle.png" width="250px" /></a></div>
+    <div class="item5">
+  
+          <a id="project" href="projects/VMinstructions/index.html" ><h1>P1</h1></a>
+          <a id="project" href="projects/VMinstructions/doc.html" ><h1>P2</h1></a>
+          <a id="project" href="projects/nodeinstall/nodeinstall.html" ><h1>Node</h1></a>
+          <a id="project" href="projects/sqljoin/index.html" ><h1>Joins</h1></a>
+          <a id="project" href="projects/Schema/index.html" ><h1>RegEx Queries in MongoDB</h1></a>
+          <a id="project" href="projects/mongooseschema/index.html" ><h1>Mongoose Schema</h1></a>
+          <a id="project" href="projects/crossword/index.html" ><h1>Crossword Explained</h1></a>
+          <a id="project" href="projects/sandbox/index.html" ><h1>sandbox</h1></a>
+          <a id="project" href="projects/postman/index.html" ><h1>Postman</h1></a>
+          <a id="project" href="projects/java/index.html" ><h1>DOM Time</h1></a>
+          <a id="project" href="projects/DOMinator/index.html" ><h1>DOMinator</h1></a>
+
+  
+    </div>
+    
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  </body>
+  
+  </html>
+  

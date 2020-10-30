@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM Tanner Helms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+    <script src="js/domtime.js"></script>
+    <style>
+        body {
+            background-image: url("images/background.jpg");
+        }
+
+        #page {
+            width: 100%;
+        }
+
+        #Clock {
+            background: #556677;
+            text-align: left;
+            width: 500px;
+            height: auto;
+
+            color: #e0dfdc;
+            letter-spacing: .1em;
+            text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        #projects1 {
+            color: #A7DD3C;
+            font-size: 60px;
+            text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77, 0, 38, 0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 6px 2px 3px rgba(77, 0, 13, 0.5), 6px 0 9px #FF5500, 8px 0 9px #802A00, 9px 2px 9px rgba(77, 25, 0, 0.5), 9px 0 18px #FFD500, 11px 0 18px #806A00, 12px 2px 18px rgba(77, 66, 0, 0.5), 12px 0 30px #D4FF00, 14px 0 30px #6A8000, 15px 2px 30px rgba(64, 77, 0, 0.5), 15px 0 45px #80FF00, 17px 0 45px #408000, 17px 2px 45px rgba(38, 77, 0, 0.5);
+            text-decoration: underline;
+
+        }
+
+        a {
+            font-size: 30px;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+
+        }
+
+        .head {
+            grid-area: header;
+            background-image: url("../../images/back.jpg");
+            width: auto;
+            text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+            font-size: 30px;
+            color: #e0dfdc;
+        }
+
+        .grow:hover {
+            -webkit-transform: scale(1.15);
+            -ms-transform: scale(1.15);
+            transform: scale(1.15);
+
+        }
+
+
+
+        .links {
+            grid-area: links;
+            background: #556677;
+            text-align: center;
+        }
+
+        .school {
+            grid-area: school;
+            background: #556677;
+
+            text-align: center;
+
+        }
+
+        .main {
+            grid-area: main;
+            background: #556677;
+            padding-left: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            width: 100%;
+            grid-template-areas:
+                'header header header header header header'
+                'links links links links links links'
+                'school school school school school school'
+                'main ... ... ... ... ...';
+
+
+        }
+
+        .intro {
+            grid-area: intro;
+        }
+
+        .org1 {
+            display: grid;
+            grid-template-areas:
+                'intro clock';
+        }
+
+        .clock {
+            grid-area: clock;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body onload='renderTime();'>
+
+
+
+    <div id="page" class="grid-container">
+
+
+        <div class="head" style="text-align:center; padding-top:10%;">
+            <div class="org1">
+                <div class="intro">
+                    Computer Science & Web Development Portfolio
+                    <br><br>
+                    Tanner Helms -- B1 & B2
+                    <br><br>
+                </div>
+                <div id="Clock" class="clock">
+
+                    <p>Meridian, Idaho</p>
+
+                    <div id='clockDisplay' class="container"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clock">
+
+            <div id="Clock" class="container1">
+
+                <p>Meridian, Idaho</p>
+
+                <div id='clockDisplay' class="container"></div>
+
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com/TannerHelms"><img src="../../images/github.png" style="height:300px;" class="grow"></a>
+            <a href="https://bitbucket.org/TannerHelms/"><img src="../../images/bitbucket.png" style="height:280px;"
+                    class="grow"></a>
+            <a href="https://heroku.com/"><img src="../../images/heroku.png" style="height:270px;" class="grow"></a>
+
+        </div>
+        <div class="school">
+            <img src="../../images/logo_eagle.png" alt="Eagle">
+            <img src="../../images/logo_centennial.png" alt="Centennial">
+
+
+
+        </div>
+
+
+
+
+        <div class="main">
+            <span id="projects1">Projects</span><br><br>
+            <a href="../../projects/VMinstructions/index.html" id="links1" style="text-align:left;">VM Instructions</a><br>
+            <a href="../../projects/VMinstructions/doc.html" id="links1" style="text-align:left;">Install MySQL</a><br>
+            <a href="../../projects/nodeinstall/nodeinstall.html" id="links1" style="text-align:left;">Install Node</a><br>
+            <a href="../../projects/sqljoin/index.html" id="links1" style="text-align:left;">MySQL joins</a><br>
+            <a href="../../projects/Schema/index.html" id="links1" style="text-align:left;">RegEx Queries in MongoDB</a><br>
+            <a href="../../projects/mongooseschema/index.html" id="links1" style="text-align:left;">Mongoose Schema</a><br>
+            <a href="../../projects/crossword/index.html" id="links1" style="text-align:left;">Crossword Explained</a><br>
+            <a href="../../projects/sandbox/index.html" id="links1" style="text-align:left;">Code Sandbox</a><br>
+            <a href="../../projects/projects/postman/index.html" id="links1" style="text-align:left;">Postman</a><br>
+            <a href="../../projects/projects/java/index.html" id="links1" style="text-align:left;">Dom Time</a><br>
+
+
+
+
+
+
+
+
+            <br><br>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

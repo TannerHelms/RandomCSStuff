@@ -1,0 +1,96 @@
+<script>
+body {
+background: #0000FF;
+font-family: 'BioRhyme Expanded', serif;
+}
+#header {
+  grid-area: hd;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  text-align: center;
+  font-family: 'BioRhyme Expanded', serif;
+
+}
+#navBar{
+  grid-area:navBar;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+}
+#search {
+  grid-area: search;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+}
+
+#instructions {
+  grid-area: instruct;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+}
+
+#footer {
+  grid-area: ft;
+  background-color: #FFFF00;
+  border: 3px solid #FF0000;
+  padding: 20px;
+  font-family: 'BioRhyme Expanded', serif;
+}
+
+#master {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 10px;
+  grid-template-areas:
+  'hd          hd '
+  'search      instruct'
+  'navBar      navBar'
+  'ft          ft ';
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+table{
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+tr,td{
+  border: 1px solid black;
+  text-align:center;
+}
+tr:nth-child(even) {
+  background-color: #565656;
+}
+th{
+  padding: 2px 4px;
+}
+
+</script>

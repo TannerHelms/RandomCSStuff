@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded" rel="stylesheet">
+  <style>
+  body {
+    background-image: url(../images/wood1.jpg);
+  }
+h4 {
+  font-family: 'BioRhyme Expanded', serif;
+}
+  #master {
+    display: grid;
+    grid-template-columns: 1800px auto;
+    grid-template-rows: 120px auto 200px;
+    grid-gap: 10px;
+    color: red;
+    grid-template-areas:
+    'header       header'
+    'search       instructions'
+    'footer       footer'
+    ;
+  }
+  #header {
+    grid-area: header;
+    text-align: center;
+    background-image: url(../images/blue.jpg);
+  }
+  #search {
+    grid-area: search;
+    background-image: url(../images/blue.jpg);
+  }
+  #instructions {
+    grid-area: instructions;
+    background-image: url(../images/blue.jpg);
+  }
+  #footer {
+    grid-area: footer;
+    background-image: url(../images/blue.jpg);
+  }
+  table {
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid black;
+  }
+  th {
+    font-size: 15px;
+    text-align: center
+  }
+  td {
+    font-size: 15px;
+    text-align: center;
+  }
+  thead{
+    border-bottom: 2px solid black;
+  }
+  tbody {
+    color: blue;
+    height: 100px;
+    overflow-y: auto;
+  }
+  tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+tbody:nth-child(even) {background: #FFF}
+tbody:nth-child(odd) {background: #CCC}
+
+
+  </style>
+</head>
+
+<body>
+  <div id="master">
+
+    <div id="header">
+      <br>
+      <h4>Hello, welcome to Search DB!</h4>
+      <br />
+    </div>
+
+    <div id="search">
+      <h4>search</h4>
+      					<table>
+                  <col width="35">
+                  <col width="100">
+                  <col width="100">
+                  <col width="150">
+                  <col width="130">
+                  <col width="100">
+                  <col width="200">
+                  <col width="250">
+                  <col width="100">
+                  <col width="230">
+                  <col width="150">
+                  <col width="100">
+                  <col width="100">
+                  <thead>
+      							<tr>
+      				  	   <th>ID</th>
+      						   <th>First Name</th>
+      						   <th>Last Name</th>
+      						   <th>When It Happened</th>
+      						   <th>How Long</th>
+      						   <th>How Many</th>
+      						   <th>Alien_description</th>
+      						   <th>What they did</th>
+      						   <th>Other Abductees</th>
+      						   <th>Abductee Description</th>
+      						   <th>Other Info</th>
+      						   <th>Email</th>
+      						   <th>Report Date</th>
+      							</tr>
+                  </thead>
+
+      								<?php
+      							  include '../php/DBconnect_4parm.php';
+      							  $sql="SELECT id, first_name, last_name, when_it_happened, how_long, how_many, alien_description, what_they_did, other_abductees, abductee_description, other_info, email, report_date  FROM alien_abduction";
+      							  $result=$conn->query($sql);
+      							  if($result->num_rows>0) {
+      							  // output data of each row
+      							  while($row=$result->fetch_assoc()) {
+      							  echo "<tbody><tr><td>".$row["id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["when_it_happened"]."</td><td>".$row["how_long"]."</td><td>".$row["how_many"]."</td><td>".$row["alien_description"]."</td><td>".$row["what_they_did"]."</td><td>".$row["other_abductees"]."</td><td>".$row["abductee_description"]."</td><td>".$row["other_info"]."</td><td>".$row["email"]."</td><td>".$row["report_date"]."</td></tr></tbody>";
+      							  }
+      							  echo "</table>";
+      							  } else {
+      							  echo "0 results";
+      							  }
+      							  $conn->close();
+      							  ?>
+
+      						</table>
+      			</div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div id="instructions">
+      <h5>instructions</h5>
+    </div>
+
+    <div id="footer">
+      <h2>footer</h2>
+    </div>
+  </div>
+  <br />
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+<div class="dropdown">
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+My Amazing Classmates!
+</button>
+<div class="dropdown-menu">
+<h5 class="dropdown-header">Inspiring Client Presentation</h5>
+<a class="dropdown-item" href="http://www.westada.tech/a1/p3/heathers/">Heather S</a>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/lukec/">Luke C</a>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/davidb/">David B</a>
+<h5 class="dropdown-header">Inspiring Documentation</h5>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/zacharys/pages/php_test.html">Zachary S</a>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/michaelc/pages/initial_PHP_+_form.html">Michael C</a>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/josephm/docs/php_first_test.html">Joseph M</a>
+<h5 class="dropdown-header">Inspiring SQL Queries</h5>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/tannerh/pages/searchDB.php">Tanner H</a>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/josephm/pages/searchDB.php">Joseph M</a>
+<a class="dropdown-item" href="http://westada.tech/a1/p3/connorc/pages/searchDB.php">Connor C</a>
+
+</div>
+</div>
+</div>
+
+
+<div>
+  <object type="text/html" data="https://l42games.yolasite.com/Meme-Page.php?formId1d8e45cb35c4b41904b674abecbd63fPosted=true" width="800px" height="600px" style="overflow:auto;border:5px ridge blue">
+  </object>

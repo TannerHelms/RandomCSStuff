@@ -1,0 +1,8 @@
+		<!-- Below Dev only, must deactivate for Ops!! -->
+		<!--
+		<?php
+			include 'php/DBcreateDatabase.php';
+			include 'php/DBmakeTable.php';
+		?>
+		-->
+		<!-- Above Dev only, must deactivate for Ops!! -->

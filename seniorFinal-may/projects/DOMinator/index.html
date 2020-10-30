@@ -1,0 +1,166 @@
+﻿
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>Dominator</title>
+
+<!--Bootstrap stuff-->
+
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+<!-- jQuery library -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<!-- Popper JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+
+<!-- Latest compiled JavaScript -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--End of Bootstrap stuff-->
+
+<link rel="stylesheet" type="text/css" href="../../css/w3.css">
+
+<link rel="stylesheet" type="text/css" href="./index.css">
+<style>
+    body {
+      background-color: blue;
+      
+      background-image: url(../../images/wood1.jpg);
+    }
+    p {
+        color:white;
+    }
+    </style>
+
+</head> 
+
+<body>
+
+<a href="../../index.html" style="color:white;">back to main page</a>
+
+<div id="page" style="color:white;"></div>
+
+<hr class="my-4">
+
+<div id="wrap">
+
+<div class="card bg-dark m-auto w-75">
+
+<h5 class="card-header text-light">
+
+<span class="h1 text-warning font-italic mr-2">JavaScript</span>
+
+<span class="btn btn-sm btn-danger float-right" onclick="disappear()">X</span>
+
+</h5>
+
+<div class="card-body row">
+
+<div class="input-group">
+
+<input type="text" class="col-2" placeholder="tagName">
+
+<input type="text" class="col-10" placeholder="className">
+
+<input type="text" class="col-3" placeholder="id">
+
+<input type="text" class="col-6" placeholder="innerHTML">
+
+<input type="text" class="col-3" placeholder="parent id">
+
+</div>
+
+<div class="btn-group mt-2">
+
+<span class="btn btn-warning" onclick="create_Ele()">Create New Element</span>
+
+<span class="btn btn-danger" onclick="deleteElement()">Remove Last Element</span>
+
+<span class="btn btn-outline-secondary" onclick="resetForm()">Reset</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<h1 style="text-align: left    ;color:white;"> Explanation:</h1>
+
+<pre style="text-align:left; color:white;">
+
+This is a page to implement new html elements utilizing JavaScript. Simply 
+put in the required elements into the fields in the form above and observe
+them when you press "Create New Element".
+For example, try putting "h1" in the tagName and "hello" in the innerHTML.
+
+</pre>
+<p>This code shows how we create the elements to create the tag.</p>
+<img src="1.png">
+<p>This code shows how the website is able to reset the elements.</p>
+<img src="2.png">
+<p>This code shows how you can delete the element off your webpage.</p>
+<img src="3.png">
+<p>This code shows how you can make the whole entire element page reappear after dissapering.</p>
+<img src="4.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script src="./index.js"></script>-->
+
+
+
+
+
+</body>
+
+<script src="./app.js"></script>
+
+</html>
+
